@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Stealth Games</title>
+<link rel="stylesheet" href="styles.css">
+<link rel="icon" type="image/x-icon" href="./coolbackground.png">
+</head>
+<body>
+
+<div class="container">
+
+    <h1>Stealth Gaming Portal</h1>
+    <!-- 1. Now below the h1 -->
+    <div class="search-container">
+        <input type="url" id="urlInput" class="search-input" placeholder="Type a URL (e.g. gmail.com)">
+        <button class="search-button" onclick="searchSite()">Go Stealth</button>
+    </div>
+    <p class="top-p" style="font-size: 15px; color:#00d4ff;">URLS that cannot be embedded will redirect to normal page</p>
+    <h2 style="color: #ffffff; font-size: 24px;">[ STEALTH LINKS ]</h2>
+
+    <!-- 2. Updated Stealth Games with frame-friendly links -->
+    <div class="button-group">
+        <!-- Added more games -->
+        <button class="my-button" onclick="openSite('arras.io')">arras.io</button>
+        <!-- Try this 2048 alternative -->
+        <button class="my-button" onclick="openSite('2048game.com')">2048</button>
+        <button class="my-button" onclick="openSite('tetris.com')">Tetris</button>
+        <!-- Wordle is very strict; this third-party version usually works in frames -->
+        <button class="my-button" onclick="openSite('wordlegame.org')">Wordle</button>
+        <button class="my-button" onclick="openSite('websudoku.com')">Sudoku</button>
+        <!-- Slope works best with the Y8 official embed link -->
+        <button class="my-button" onclick="openSite('y8.com/embed/slope')">Slope</button>
+    </div>
+
+    <!-- 3. Category: Standard Links -->
+    <h2 style="color: #ffffff; font-size: 24px; margin-top: 20px; margin-bottom: 10px;">[ STANDARD LINKS ]</h2>
+    <p class="bottom-p" style="font-size: 12px;">(Opens in a new tab normally)</p>
+    <!-- Changed so that standard links have a fake title -->
+    <div class="button-group">
+        <button class="my-button" onclick="maskLink('https://google.com', 'Google Drive')">Google</button>
+        <button class="my-button" onclick="maskLink('https://chess.com', 'Google Drive')">Chess.com</button>
+        <button class="my-button" onclick="maskLink('https://dashnet.org', 'Google Drive')">Cookie Clicker</button> <!-- Better link -->
+        <button class="my-button" onclick="maskLink('https://youtube.com', 'Google Drive')">Youtube</button>
+        <button class="my-button" onclick="maskLink('https://discord.com', 'Google Drive')">Discord</button>
+        <button class="my-button" onclick="maskLink('http://slither.io', 'Google Drive')">Slither.io</button>
+    </div>
+    <!-- 5. This adds your name at the bottom of the page -->
+    <footer class="site-footer">
+        <p>Created by Loki Li</p>
+    </footer>
+    <!-- 4. This single line connects your HTML to all the code in script.js -->
+    <script src="scripts.js"></script>
+</div>
+</body>
+</html>
