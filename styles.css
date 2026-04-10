@@ -1,0 +1,141 @@
+@import url('https://googleapis.com');
+body {
+/* Replace the URL in the quotes with your favorite image link */
+    background-image: url(background.png);
+    background-size: cover;       /* Makes the image fill the whole screen */
+    background-position: center;  /* Centers the image */
+    background-attachment: fixed; /* Keeps the background still when you scroll */
+    background-color: #121212;    /* Fallback color if the image fails to load */
+    color: #ffffff;
+    font-family: 'Segoe UI', sans-serif;
+    text-align: center;
+    padding-top: 0px;
+}
+h1 {
+    font-family: 'Orbitron', sans-serif;
+    color: #00d4ff; /* A nice neon blue to match your background */
+    text-shadow: 0 0 10px #00d4ff; /* Makes the text actually glow! */
+    animation: neonPulse 1s infinite alternate;
+}
+p {
+    color: #00d4ff;
+    font-size: 18px;
+    text-shadow: 0 0 8px #00d4ff;
+}
+.top-p { 
+    margin-top: 18px; 
+    margin-bottom: 0px;
+    line-height: 1; /* This removes the extra space around the letters */
+}
+.bottom-p { 
+    margin-top: 0px;    /* This removes the gap coming from the top of the second item */
+    margin-bottom: 14px;
+}
+.search-container {
+    margin-bottom: 0px !important;
+}
+
+/* 2. This defines what 'neonPulse' actually does (the engine) */
+@keyframes neonPulse {
+    from {
+        text-shadow: 0 0 5px #00d4ff, 0 0 10px #00d4ff;
+        opacity: 0.8;
+    }
+    to {
+        text-shadow: 0 0 10px #00d4ff, 0 0 20px #00d4ff;
+        opacity: 1;
+    }
+}
+
+/* 3. This makes the buttons White with Black text */
+.my-button {
+    background-color: #e0f0ff; /* Very light ice blue */
+    color: #000000;           /* Keeps text black for contrast */
+    padding: 12px 24px;       /* Slightly smaller than before */
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;          /* A middle-ground size */
+    font-weight: bold;
+    transition: 0.3s;
+    margin: 8px;
+    display: inline-block;   /* Essential for <a> tags to act like buttons */
+    text-decoration: none;   /* Removes the underline from the <a> links */
+    line-height: 1.2;        /* Keeps the text centered vertically */
+}
+
+/* 4. This adds a white glow when you hover */
+.my-button:hover {
+    background-color: #b3d9ff; /* Brighter blue when you touch it */
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(30, 144, 255, 0.6), 
+        0 0 30px rgba(30, 144, 255, 0.3); /* Blue tinted glow */
+}   
+.container {
+    background: rgba(0, 0, 0, 0.7);
+    max-width: 900px;              /* Changed from 600px to 900px */
+    margin: 20px auto;             /* Keeps the box centered */
+    padding: 40px;
+    border-radius: 15px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centers the titles and buttons inside the box */
+}
+
+/* This puts the buttons in a neat row that wraps */
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+}
+/* 5. This styles the search bar to be a single row */
+.search-container {
+    margin-top: 10px;      /* Reduced margin since it's under the H1 now */
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 500px;
+    display: flex;         /* This puts the input and button in a row */
+    justify-content: center;
+}
+
+.search-input {
+    flex: 1;               /* This makes the input take up the available space */
+    padding: 12px;
+    border-radius: 4px 0 0 4px; /* Rounded only on the left side */
+    border: 1px solid #00d4ff;
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: 16px;
+    outline: none;
+}
+
+.search-button {
+    width: auto;           /* Let the button size itself based on text */
+    padding: 12px 20px;
+    background-color: #00d4ff;
+    color: black;
+    border: none;
+    border-radius: 0 4px 4px 0; /* Rounded only on the right side */
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.search-button:hover {
+    background-color: #b3d9ff;
+}
+/* 5. Styles the footer at the bottom */
+.site-footer {
+    margin-top: 40px;
+    padding: 20px;
+    border-top: 1px solid rgba(0, 212, 255, 0.2); /* Faint neon line */
+}
+
+.site-footer p {
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5); /* Dimmed white so it's not distracting */
+    text-shadow: none; /* Removes the pulse effect from the name */
+    animation: none;   /* Keeps your name still while the top text pulses */
+}
